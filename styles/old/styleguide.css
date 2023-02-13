@@ -1,0 +1,98 @@
+:root { 
+  --black: #000000;
+  --d-azul: #063c4d;
+  --d-blanco: #f1f1f1;
+  --d-blancoazul: #f1f8f8;
+  --d-turquesa: #00ffff;
+  --d-verde: #00a99c;
+  --white: #ffffff;
+ 
+  --font-size-l: 32px;
+  --font-size-m: 24px;
+  --font-size-s: 20px;
+  --font-size-xl: 48px;
+  --font-size-xs: 16px;
+  --font-size-xxl: 64px;
+ 
+  --font-family-league_spartan: "League Spartan", Helvetica;
+  --font-family-roboto: "Roboto", Helvetica;
+}
+.leaguespartan-bold-tarawera-20px {
+  color: var(--d-azul);
+  font-family: var(--font-family-league_spartan);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.leaguespartan-bold-cyan--aqua-32px {
+  color: var(--d-turquesa);
+  font-family: var(--font-family-league_spartan);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roboto-normal-white-24px {
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.leaguespartan-bold-tarawera-48px {
+  color: var(--d-azul);
+  font-family: var(--font-family-league_spartan);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.leaguespartan-bold-persian-green-48px {
+  color: var(--d-verde);
+  font-family: var(--font-family-league_spartan);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.leaguespartan-bold-persian-green-32px {
+  color: var(--d-verde);
+  font-family: var(--font-family-league_spartan);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roboto-medium-tarawera-20px {
+  color: var(--d-azul);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.roboto-normal-tarawera-24px {
+  color: var(--d-azul);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-bold-tarawera-24px {
+  color: var(--d-azul);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.leaguespartan-bold-black-squeeze-20px {
+  color: var(--d-blancoazul);
+  font-family: var(--font-family-league_spartan);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+}
