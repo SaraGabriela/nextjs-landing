@@ -7,8 +7,6 @@ const nextConfig = {
     unoptimized: true,
     path: ""
   },
-  basePath: "/nextjs-landing",
-  assetPrefix: "/nextjs-landing",
 }
 
 module.exports = nextConfig
