@@ -1054,7 +1054,7 @@ const [mounted, setMounted] = useState(false);
   )
 }
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const [benefitsRes, headerRes, talentRes, companyRes, communityRes] = await Promise.all([
     fetch("https://darshana.directus.app/items/benefits"),
     fetch("https://darshana.directus.app/items/header"),
