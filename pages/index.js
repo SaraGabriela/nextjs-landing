@@ -7,7 +7,7 @@ import {useState, useEffect} from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({benefit, head, talent, company, community}) {
+export default function Home({benefit, head, talent, company, community, protocolDet, testimonial, partnership}) {
 
 const [mounted, setMounted] = useState(false);
   useEffect(() => {
@@ -95,7 +95,7 @@ const [mounted, setMounted] = useState(false);
                 <div className="row">
                     <div className="col-lg-12">
                         <nav className="navbar navbar-expand-lg">
-                            <a className="navbar-brand col-4" href="index.html">
+                            <a className="navbar-brand col-3" href="index.html">
                                 <img src="img/dar-logo.png" alt="Logo"/>
                             </a>
                             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -412,6 +412,23 @@ const [mounted, setMounted] = useState(false);
             </div> {/*<!-- row -->*/}
             <div className="service-wrapper mt-60 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
                 <div className="row no-gutters justify-content-center">
+                { protocolDet.data.map (pro =>(
+                    pro.status === 'published' &&
+                    
+                    <div className="col-lg-4 col-md-7" key={pro.id}>
+                        <div className="single-service d-flex">
+                            <div className="service-icon">
+                                    <img src={"https://darshana.directus.app/assets/" + pro.icon} alt="Icon"/>
+                            </div>
+                            <div className="service-content media-body">
+                                    <h4 className="service-title">{pro.title}</h4>
+                                    <p className="text">{pro.description}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                                                    ))}
+                    {/*
                     <div className="col-lg-4 col-md-7">
                         <div className="single-service d-flex">
                             <div className="service-icon">
@@ -427,7 +444,7 @@ const [mounted, setMounted] = useState(false);
                             <div className="shape shape-2">
                                 <img src="img/shape/shape-2.svg" alt="shape"/>
                             </div>
-                        </div> {/*<!-- single service -->*/}
+                        </div> {/*<!-- single service -->
                     </div>
                     <div className="col-lg-4 col-md-7">
                         <div className="single-service service-border d-flex">
@@ -441,7 +458,7 @@ const [mounted, setMounted] = useState(false);
                             <div className="shape shape-3">
                                 <img src="img/shape/shape-3.svg" alt="shape"/>
                             </div>
-                        </div> {/*<!-- single service -->*/}
+                        </div> {/*<!-- single service -->
                     </div>
                     <div className="col-lg-4 col-md-7">
                         <div className="single-service d-flex">
@@ -458,8 +475,8 @@ const [mounted, setMounted] = useState(false);
                             <div className="shape shape-5">
                                 <img src="img/shape/shape-5.svg" alt="shape"/>
                             </div>
-                        </div> {/*<!-- single service -->*/}
-                    </div>
+                        </div> {/*<!-- single service -->
+                    </div> */}
                 </div> {/*<!-- row -->*/}
                 <div className="row">
                     <div className="col-lg-12">
@@ -696,18 +713,21 @@ const [mounted, setMounted] = useState(false);
                             <i className="lni-quotation"></i>
                         </div>
                         <div className="testimonial-content-wrapper testimonial-active">
-                            <div className="single-testimonial">
+                        { testimonial.data.map (tes =>(
+                            tes.status === 'published' &&
+                            
+                            <div className="single-testimonial" key={tes.id}>
                                 <div className="testimonial-text">
-                                    <p className="text">“Praesent scelerisque, odio eu fermentum malesuada, nisi arcu volutpat nisl, sit amet convallis nunc turp.”</p>
+                                    <p className="text">{tes.testimonial}</p>
                                 </div>
                                 <div className="testimonial-author d-sm-flex justify-content-between">
                                     <div className="author-info d-flex align-items-center">
                                         <div className="author-image">
-                                            <img src="img/author-1.jpg" alt="author"/>
+                                            <img src={"https://darshana.directus.app/assets/" + tes.picture} alt="author"/>
                                         </div>
                                         <div className="author-name media-body">
-                                            <h5 className="name">John Doe</h5>
-                                            <span className="sub-title">CEO, Alphabet</span>
+                                            <h5 className="name">{tes.username}</h5>
+                                            <span className="sub-title">{tes.type}</span>
                                         </div>
                                     </div>
                                     <div className="author-review">
@@ -721,59 +741,9 @@ const [mounted, setMounted] = useState(false);
                                         {/*<span className="review">( 7 Reviews )</span>*/}
                                     </div>
                                 </div>
-                            </div> {/*<!-- single testimonial -->*/}
-                            <div className="single-testimonial">
-                                <div className="testimonial-text">
-                                    <p className="text">“Praesent scelerisque, odio eu fermentum malesuada, nisi arcu volutpat nisl, sit amet convallis nunc turp.”</p>
-                                </div>
-                                <div className="testimonial-author d-sm-flex justify-content-between">
-                                    <div className="author-info d-flex align-items-center">
-                                        <div className="author-image">
-                                            <img src="img/author-2.jpg" alt="author"/>
-                                        </div>
-                                        <div className="author-name media-body">
-                                            <h5 className="name">John Doe</h5>
-                                            <span className="sub-title">CEO, Alphabet</span>
-                                        </div>
-                                    </div>
-                                    <div className="author-review">
-                                        <ul className="star">
-                                            <li><i className="lni-star"></i></li>
-                                            <li><i className="lni-star"></i></li>
-                                            <li><i className="lni-star"></i></li>
-                                            <li><i className="lni-star"></i></li>
-                                            <li><i className="lni-star"></i></li>
-                                        </ul>
-                                        {/*<span className="review">( 7 Reviews )</span>*/}
-                                    </div>
-                                </div>
-                            </div> {/*<!-- single testimonial -->*/}
-                            <div className="single-testimonial">
-                                <div className="testimonial-text">
-                                    <p className="text">“Praesent scelerisque, odio eu fermentum malesuada, nisi arcu volutpat nisl, sit amet convallis nunc turp.”</p>
-                                </div>
-                                <div className="testimonial-author d-sm-flex justify-content-between">
-                                    <div className="author-info d-flex align-items-center">
-                                        <div className="author-image">
-                                            <img src="img/author-3.jpg" alt="author"/>
-                                        </div>
-                                        <div className="author-name media-body">
-                                            <h5 className="name">John Doe</h5>
-                                            <span className="sub-title">CEO, Alphabet</span>
-                                        </div>
-                                    </div>
-                                    <div className="author-review">
-                                        <ul className="star">
-                                            <li><i className="lni-star"></i></li>
-                                            <li><i className="lni-star"></i></li>
-                                            <li><i className="lni-star"></i></li>
-                                            <li><i className="lni-star"></i></li>
-                                            <li><i className="lni-star"></i></li>
-                                        </ul>
-                                        {/*<span className="review">( 7 Reviews )</span>*/}
-                                    </div>
-                                </div>
-                            </div> {/*<!-- single testimonial -->*/}
+                            </div>
+                            ))}
+                            
                         </div> {/*<!-- testimonial content wrapper -->*/}
                     </div> {/*<!-- testimonial right content -->*/}
                 </div>
@@ -790,18 +760,20 @@ const [mounted, setMounted] = useState(false);
             <div className="row">
                 <div className="col-lg-12">
                     <div className="brand-wrapper pt-70 clearfix">
-                        <div className="single-brand mt-50 text-md-left wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                            <img src="img/brand-1.png" alt="brand"/>
-                        </div> {/*<!-- single brand -->*/}
-                        <div className="single-brand mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                            <img src="img/brand-2.png" alt="brand"/>
-                        </div> {/*<!-- single brand -->*/}
+                    {partnership.data.map ( par => ( 
+                        par.status === "published" &&
+                        <div key={par.id} className="single-brand mt-50 text-md-left wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+                            <img src={"https://darshana.directus.app/assets/" + par.image} alt="Icon"/>
+                        </div>
+                    ))}
+
+                        {/*}
                         <div className="single-brand mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
                             <img src="img/brand-3.png" alt="brand"/>
-                        </div> {/*<!-- single brand -->*/}
+                        </div> {/*<!-- single brand -->*
                         <div className="single-brand mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
                             <img src="img/brand-4.png" alt="brand"/>
-                        </div> {/*<!-- single brand -->*/}
+                        </div> {/*<!-- single brand -->
                         <div className="single-brand mt-50 text-md-right wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
                             <img src="img/brand-5.png" alt="brand"/>
                         </div> {/*<!-- single brand -->*/}
@@ -1055,20 +1027,26 @@ const [mounted, setMounted] = useState(false);
 }
 
 export const getServerSideProps = async (context) => {
-  const [benefitsRes, headerRes, talentRes, companyRes, communityRes] = await Promise.all([
+  const [benefitsRes, headerRes, talentRes, companyRes, communityRes, protocolRes, testimonialRes, partnershipRes] = await Promise.all([
     fetch("https://darshana.directus.app/items/benefits"),
     fetch("https://darshana.directus.app/items/header"),
     fetch("https://darshana.directus.app/items/talent_details"),
     fetch("https://darshana.directus.app/items/company_details"),
-    fetch("https://darshana.directus.app/items/community_details")
+    fetch("https://darshana.directus.app/items/community_details"),
+    fetch("https://darshana.directus.app/items/protocol"),
+    fetch("https://darshana.directus.app/items/testimonials"),
+    fetch("https://darshana.directus.app/items/partnerships")
   ]);
 
-  const [benefits, header, talents, companies, communities] = await Promise.all([
+  const [benefits, header, talents, companies, communities, protocol, testimonials, partnerships] = await Promise.all([
     benefitsRes.json(),
     headerRes.json(),
     talentRes.json(),
     companyRes.json(),
-    communityRes.json()
+    communityRes.json(),
+    protocolRes.json(),
+    testimonialRes.json(),
+    partnershipRes.json(),
   ]);
 
   return { props: { 
@@ -1076,7 +1054,10 @@ export const getServerSideProps = async (context) => {
     head: header,
     talent: talents,
     company:companies,
-    community: communities 
+    community: communities,
+    protocolDet: protocol,
+    testimonial: testimonials,
+    partnership: partnerships, 
   } };
 
 }
