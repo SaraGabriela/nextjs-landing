@@ -132,7 +132,6 @@ p {
     z-index: 0;
     position: absolute;
     max-width: 100%;
-    overflow: auto;
   }
   @media (max-width: 767px) {
     .blobs {
@@ -944,6 +943,9 @@ p {
   color:#063C4D;
 }
 
+.questions h4{
+  color: #00A99C;
+}
 .about-title .welcome {
   font-size: 18px;
   font-weight: 400;

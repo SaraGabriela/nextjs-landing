@@ -328,7 +328,11 @@ const [mounted, setMounted] = useState(false);
                                                     ))}
                                                 </ul>
                                             </p>
-                                            
+                                            {/*<div className="questions">
+                                                <h4>Frequent questions</h4>
+
+
+                                                    </div>*/}
                                             {/*}
                                             <div className="our-services-progress d-flex align-items-center mt-55">
                                                 <div className="circle" id="circles-1"></div>
