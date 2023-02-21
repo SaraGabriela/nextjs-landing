@@ -132,7 +132,12 @@ p {
     z-index: 0;
     position: absolute;
     max-width: 100%;
-    overflow: hidden;
+    overflow: auto;
+  }
+  @media (max-width: 767px) {
+    .blobs {
+      overflow: hidden;
+    }
   }
 
   .header-area, .about-area {
