@@ -24,6 +24,7 @@ const [mounted, setMounted] = useState(false);
         <link rel="icon" href="/favicon.ico" />
 
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="js/vendor/modernizr-3.7.1.min.js"></script>
     
     <script src="js/popper.min.js"></script>
@@ -131,7 +132,7 @@ const [mounted, setMounted] = useState(false);
                             </div> {/*<!-- navbar collapse -->*/}
                             
                             <div className="navbar-btn d-none d-sm-inline-block">
-                                <a className="main-btn" data-scroll-nav="0" href="#pricing">Join our Community</a>
+                                <a className="main-btn" data-scroll-nav="0" target="_blank" href="https://discord.gg/darshana">Join our Community</a>
                             </div>
                         </nav> {/*<!-- navbar -->*/}
                     </div>
@@ -159,7 +160,7 @@ const [mounted, setMounted] = useState(false);
                             
                             <div className="header-singup wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">
                                 <button className="main-btn light-btn">Launch App</button>
-                                <button className="main-btn dark-btn">Hire Talent</button>
+                                <button className="main-btn dark-btn">Request a demo</button>
                             </div>
                         </div> {/*<!-- header hero content -->*/}
                     </div>
