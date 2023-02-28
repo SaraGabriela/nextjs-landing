@@ -119,10 +119,10 @@ const [mounted, setMounted] = useState(false);
                                         <a href="#services">Our Services</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a href="#portfolio">Our Protocol</a>
+                                        <a href="#protocol">Our Protocol</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a href="#blog">Contact us</a>
+                                        <a href="#contact">Contact us</a>
                                     </li>
                                     {/*
                                     <li className="nav-item">
@@ -159,8 +159,8 @@ const [mounted, setMounted] = useState(false);
                             {/*<p className="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Phasellus vel elit efficitur, gravida libero sit amet, scelerisque  tortor arcu, commodo sit amet nulla sed.</p>*/}
                             
                             <div className="header-singup wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">
-                                <button className="main-btn light-btn">Launch App</button>
-                                <button className="main-btn dark-btn">Request a demo</button>
+                            <a href="https://app.darshana.io/" target="_blank"><button className="main-btn light-btn">Find a job</button></a>
+                            <a href="https://forms.monday.com/forms/f0253f6fec7ae21266d0a00b8faf8783?r=use1" target="_blank"><button className="main-btn dark-btn">Request a demo</button></a>
                             </div>
                         </div> {/*<!-- header hero content -->*/}
                     </div>
@@ -204,9 +204,9 @@ const [mounted, setMounted] = useState(false);
                     <div className="benefit row" key={ben.id}>
                     <img className="stars-1" src="img/stars-1-1@2x.png" alt="stars 1" />
                     <div className="talent-container col-10">
-                      <h3>
+                      <h4>
                       {ben.title}
-                      </h3>
+                      </h4>
                       <p className="find-the-best-talent roboto-medium-tarawera-20px">
                       {ben.description}
                       </p>
@@ -217,7 +217,7 @@ const [mounted, setMounted] = useState(false);
                       
                     </div> {/*<!-- End of benefits -->*/}
                     <div className="row justify-content-lg-center mt-45">
-                      <button className="main-btn light-btn text-center">Start Now</button>
+                      <a href="https://app.darshana.io/" target="_blank"><button className="main-btn light-btn text-center">Start Now</button></a>
                     </div>
                 </div>
             </div> {/*<!-- row -->*/}
@@ -407,7 +407,7 @@ const [mounted, setMounted] = useState(false);
     
     {/*<!--====== SERVICE PART START ======-->*/}
     
-    <section id="portfolio" className="service-area pt-105">
+    <section id="protocol" className="service-area pt-105">
         <div className="container">
             <div className="row">
                 <div className="col-lg-6 col-md-8">
@@ -711,7 +711,7 @@ const [mounted, setMounted] = useState(false);
                             <li></li>
                             <li></li>
                         </ul>
-                        <p className="text">Duis et metus et massa tempus lacinia. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas ultricies, orci molestie blandit interdum. <br/> <br/> ipsum ante pellentesque nisl, eget mollis turpis quam nec eros. ultricies, orci molestie blandit interdum.</p>
+                        
                     </div> {/*<!-- testimonial left content -->*/}
                 </div>
                 <div className="col-lg-6">
@@ -966,7 +966,7 @@ const [mounted, setMounted] = useState(false);
                             <a href="#">
                                 <img  src="img/dar-logo.png" alt="Logo" />
                             </a>
-                            <p className="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, repudiandae! Totam, nemo sed? Provident.</p> <p className="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus</p>
+                            <p className="text">A new protocol using blockchain technology to validate identities and speed up the hiring process.</p>
                         </div> {/*<!-- footer about -->*/}
                     </div>
                     <div className="col-lg-3 col-sm-6 order-sm-3 order-lg-2">
@@ -987,8 +987,6 @@ const [mounted, setMounted] = useState(false);
                                 <h5 className="title">About Us</h5>
                             </div>
                             <ul>
-                                <li><a href="#">Overview</a></li>
-                                <li><a href="#">Why us</a></li>
                                 <li><a href="#">Awards & Recognitions</a></li>
                                 <li><a href="#">Team</a></li>
                             </ul>
